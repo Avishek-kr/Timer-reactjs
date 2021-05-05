@@ -1,9 +1,26 @@
 import React, { useState, useRef } from 'react';
+import Particles from 'react-particles-js';
 import './App.css';
 
 function padTime(time){
   return time.toString().padStart(2, '0');
 }
+
+const particleOptions={
+  particles: {
+    number: {
+      value:40, 
+      density:{
+        enable: true,
+        value_area:1200
+}
+},
+color:{
+value: 'blue',
+}
+}
+}
+
 
 
 
@@ -50,7 +67,11 @@ export default function App() {
   const minutes=padTime(Math.floor(timeLeft/60));
   const seconds=padTime(timeLeft-minutes*60);
   return (
+    
     <div className="app">
+      <Particles className='particles'
+              params={particleOptions}
+              />
       <h2>{title}</h2>
 
       <div className="timer">
