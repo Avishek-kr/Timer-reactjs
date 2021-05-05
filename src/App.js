@@ -9,7 +9,7 @@ function padTime(time){
 
 export default function App() {
   const [title,setTitle]=useState("Let The Countdown Begins!!");
-  const [timeLeft, SetTimeLeft]= useState(15); 
+  const [timeLeft, SetTimeLeft]= useState(25*60); 
   const [isRunning, setIsRunning] = useState(false)
   let intervalRef=useRef(null); 
 
